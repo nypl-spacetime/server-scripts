@@ -23,7 +23,7 @@ mkdir /opt/histograph/run
 
 # dirs for log and PID files
 mkdir -p /var/log/histograph /var/run/histograph
-chown histograph:histograph /var/log/histograph/ /var/run/histograph/
+chown -R spacetime:spacetime /var/log/histograph/ /var/run/histograph/
 
 # install histograph
 
