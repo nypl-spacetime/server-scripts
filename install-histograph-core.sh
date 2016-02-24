@@ -32,13 +32,13 @@ cd /opt/histograph
 cat > setup.sh << SETUP
 
 # clean up
-rm -rf ~/core
+rm -rf /opt/histograph/histograph-core
 
 # clone master branch
 git clone https://github.com/nypl-spacetime/histograph-core
 
 # install node dependencies
-cd ~/core
+cd /opt/histograph/histograph-core
 npm install
 SETUP
 
@@ -46,8 +46,8 @@ chmod +x /opt/histograph/setup.sh
 su spacetime /opt/histograph/setup.sh
 
 # ensure ownership of dirs where node packages end up
-chown -R histograph /opt/histograph/.npm
-chown -R histograph /usr/local/lib/node_modules
+chown -R spacetime /opt/histograph/.npm
+chown -R spacetime /usr/local/lib/node_modules
 
 # install forever, create init.d scripts
 install_forever

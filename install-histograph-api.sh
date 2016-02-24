@@ -32,13 +32,13 @@ cd /opt/histograph
 cat > setup.sh << SETUP
 
 # clean up
-rm -rf ~/api
+rm -rf /opt/histograph/histograph-api
 
 # clone master branch
 git clone https://github.com/nypl-spacetime/histograph-api
 
 # install node dependencies
-cd ~/api
+cd /opt/histograph/histograph-api
 npm install
 SETUP
 
