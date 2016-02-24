@@ -5,9 +5,6 @@ set -x
 
 source library-functions.sh
 
-# install node
-install_node
-
 # create /opt/histograph and set as user home
 mkdir -p /opt/histograph
 chown -R spacetime:spacetime /opt/histograph
