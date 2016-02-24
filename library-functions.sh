@@ -77,6 +77,7 @@ INITD
 
 # start api on startup
 chmod +x /etc/init.d/histograph-$SERVICE
-chkconfig --level 35 histograph-$SERVICE on
+#chkconfig --level 35 histograph-$SERVICE on
+sudo update-rc.d histograph-$SERVICE defaults 95 10
 
 }
