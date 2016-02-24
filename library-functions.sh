@@ -19,7 +19,7 @@ cat > /opt/histograph/$SERVICE.forever.json << FOREVER
     "sourceDir": "/opt/histograph/histograph-$SERVICE",
     "pidFile": "/var/run/histograph/$SERVICE.pid",
     "logFile": "/var/log/histograph/$SERVICE.log",
-    "args": ["--config", "/opt/histograph/config.yaml"]
+    "args": ["--config", "/opt/histograph/config.yml"]
 }
 FOREVER
 
