@@ -16,14 +16,14 @@ cat > /opt/histograph/$SERVICE.forever.json << FOREVER
     "append": true,
     "watch": false,
     "script": "index.js",
-    "sourceDir": "/opt/histograph/histograph-$SERVICE",
+    "sourceDir": "/opt/histograph/$SERVICE",
     "pidFile": "/opt/histograph/run/$SERVICE.pid",
     "logFile": "/var/log/histograph/$SERVICE.log",
     "args": ["--config", "/opt/histograph/config.yml"]
 }
 FOREVER
 
-cat > /etc/init.d/histograph-$SERVICE << INITD
+cat > /etc/init.d/$SERVICE << INITD
 #!/bin/bash
 ### BEGIN INIT INFO
 # If you wish the Daemon to be lauched at boot / stopped at shutdown :
@@ -76,8 +76,8 @@ exit \$RETVAL
 INITD
 
 # start api on startup
-chmod +x /etc/init.d/histograph-$SERVICE
-#chkconfig --level 35 histograph-$SERVICE on
-sudo update-rc.d histograph-$SERVICE defaults 95 10
+chmod +x /etc/init.d/$SERVICE
+#chkconfig --level 35 $SERVICE on
+sudo update-rc.d $SERVICE defaults 95 10
 
 }

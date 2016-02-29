@@ -29,13 +29,13 @@ cd /opt/histograph
 cat > setup.sh << SETUP
 
 # clean up
-rm -rf /opt/histograph/histograph-api
+rm -rf /opt/histograph/spacetime-api
 
 # clone master branch
-git clone https://github.com/nypl-spacetime/histograph-api
+git clone https://github.com/nypl-spacetime/spacetime-api spacetime-api
 
 # install node dependencies
-cd /opt/histograph/histograph-api
+cd /opt/histograph/spacetime-api
 npm install
 SETUP
 
@@ -47,9 +47,9 @@ chown -R spacetime /opt/histograph/.npm
 chown -R spacetime /usr/local/lib/node_modules
 
 # install forever, create init.d scripts
-install_forever
-install_service api
+# install_forever
+install_service spacetime-api
 
 # start it now ?
-service histograph-api start
-service histograph-api status
+service spacetime-api start
+service spacetime-api status

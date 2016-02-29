@@ -47,8 +47,8 @@ chown -R spacetime /opt/histograph/.npm
 chown -R spacetime /usr/local/lib/node_modules
 
 # install forever, create init.d scripts
-install_forever
-install_service core
+# install_forever
+install_service histograph-core
 
 # start it now ?
 service histograph-core start
